@@ -49,7 +49,7 @@ model.fit(
     validation_data=normalized_validation_dataset,
     epochs=10
 )
-
+model.save('a.weights.h5')
 while(True): 
 	
 	ret, frame = vid.read() 
