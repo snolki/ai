@@ -6,7 +6,7 @@ train_dir = '/home/user3/Downloads/archive/leapgestrecog/leapGestRecog/'
 validation_dir = '/home/user3/Downloads/archive/leapGestRecog/00/'
 
 IMG_SIZE = (640, 240)
-BATCH_SIZE = 1
+BATCH_SIZE = 32
 
 train_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     train_dir,
@@ -32,8 +32,8 @@ model = tf.keras.Sequential([
 	tf.keras.layers.Dense(128, activation = 'tanh'),
 	tf.keras.layers.Dense(128, activation = 'tanh'),
 	tf.keras.layers.Dense(128, activation = 'tanh'),
-	tf.keras.layers.Dense(128, activation = 'tanh'),
-	tf.keras.layers.Dense(128, activation = 'tanh'),
+	#tf.keras.layers.Dense(128, activation = 'tanh'),
+	#tf.keras.layers.Dense(128, activation = 'tanh'),
 	tf.keras.layers.Dense(10, activation = 'softmax')
 	
 ])
